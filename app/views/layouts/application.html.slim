@@ -10,6 +10,12 @@ html
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   body
     .container.text-center
+      header.row.mb-3
+        .col-12
+          = image_pack_tag 'title.png', width: '200'
+          br
+          = image_pack_tag 'rails-akinator.png', width: '200'
+
       main.row
         .col-8.offset-2
           = yield

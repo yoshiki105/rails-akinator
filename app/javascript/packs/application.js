@@ -9,6 +9,9 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import 'bootstrap'
 import '../stylesheets/application'
+// 画像読み込み
+const images = require.context('../images/', true)
+const imagePath = name => images(name, true)
 
 Rails.start()
 Turbolinks.start()
