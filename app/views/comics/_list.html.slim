@@ -1,0 +1,19 @@
+#comics_list
+  p
+    button.btn.btn-primary type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="true" aria-controls="collapseExample"
+      | 漫画候補一覧はこちら
+  #collapseExample.collapse
+    table.table
+      thead
+      tr
+        th scope="col" タイトル
+        th scope="col" ジャンル
+        th scope="col" 連載
+        th scope="col" 連載期間
+      tbody
+      - Comic.all.each do |comic|
+        tr
+          td = comic.title
+          td = comic.genre
+          td = comic.publisher
+          td = "#{comic.serialization_started_year} ~ #{comic.serialization_end_year}"
