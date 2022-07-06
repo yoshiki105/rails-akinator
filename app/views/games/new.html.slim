@@ -4,4 +4,10 @@
       | あなたが思った漫画を当ててみせましょう！
       br
       | 下記漫画から一つを頭に思い描いてください。
+      br
+      | 準備ができたらゲームをはじめましょう！
   = render partial: 'comics/list'
+  = form_with url: games_path, local: true do |f|
+    .row.mt-3
+      .col-6.offset-3
+        = f.submit 'はじめる', { class: 'btn btn-lg btn-primary btn-block' }
