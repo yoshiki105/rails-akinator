@@ -1,0 +1,17 @@
+#main
+  = form_with url: '#', method: :patch, local: true do |f|
+
+    .row
+      .col-12
+        .card.bg-light
+          .card-header
+            | あなたがイメージした漫画はこれですか？
+          .card-body
+            p.card-text
+              = @comic.title
+
+    .row.mt-5
+      .col-6
+        = f.submit '違います', name: :incorrect, class: 'btn btn-lg btn btn-outline-info btn-block'
+      .col-6
+        = f.submit '正解です', name: :correct, class: 'btn btn-lg btn btn-outline-info btn-block'
