@@ -1,5 +1,5 @@
 case ENV['SECTION']
-when "2"
+when '2'
   comics = [
     { title: 'ワンピース ONE PIECE', genre: '少年漫画 海賊 冒険ファンタジー バトル', serialization_started_year: 1997, serialization_end_year: nil, publisher: '週刊少年ジャンプ' },
     { title: 'ゴルゴ13', genre: 'ハードボイルド 劇画', serialization_started_year: 1968, serialization_end_year: nil, publisher: 'ビッグコミック' },
@@ -27,7 +27,8 @@ when "2"
     { title: 'るろうに剣心', genre: '少年漫画 歴史 剣劇 時代劇', serialization_started_year: 1994, serialization_end_year: 1999, publisher: '週刊少年ジャンプ' },
     { title: '三国志', genre: '歴史フィクション 三国時代（中国史） 軍事・政治 少年漫画', serialization_started_year: 1971, serialization_end_year: 1987, publisher: '希望の友' },
     { title: 'キャプテン翼', genre: '少年漫画 サッカー漫画 スポーツ 学園漫画', serialization_started_year: 1981, serialization_end_year: 1988, publisher: '週刊少年ジャンプ' },
-    { title: '鋼の錬金術師', genre: 'ダークファンタジー SF スチームパンク 少年漫画 バトルアクション漫画 冒険漫画', serialization_started_year: 2001, serialization_end_year: 2010, publisher: 'ガンガンコミックス' },
+    { title: '鋼の錬金術師', genre: 'ダークファンタジー SF スチームパンク 少年漫画 バトルアクション漫画 冒険漫画', serialization_started_year: 2001, serialization_end_year: 2010,
+      publisher: 'ガンガンコミックス' },
     { title: 'FAIRYTAILフェアリーテイル', genre: 'ファンタジー 少年漫画 バトル', serialization_started_year: 2006, serialization_end_year: 2017, publisher: '週刊少年マガジン' },
     { title: 'キングダム', genre: '伝奇 武侠 中国時代劇 戦国時代(中国) 青年漫画', serialization_started_year: 2006, serialization_end_year: nil, publisher: '週刊ヤングジャンプ' },
     { title: '花より男子', genre: '学園漫画 恋愛', serialization_started_year: 1992, serialization_end_year: 2004, publisher: 'マーガレット' },
