@@ -1,0 +1,25 @@
+#main
+  .row
+    .col-12
+      .card.bg-light
+        .card-header 質問
+        .card-body
+          p.card-text = @question.content
+
+  = form_with model: @progress, url: game_progress_path, local: true do |f|
+    = f.hidden_field :question_id, value: @question.id
+    .row.mt-5
+      .col-12
+        .form-check.form-check-inline.mr-5
+          = f.radio_button :answer, :positive, { class: 'form-check-input' }
+          = f.label :answer_positive, 'はい', { class: 'form-check-label' }
+        .form-check.form-check-inline.mr-5
+          = f.radio_button :answer, :unknown, { class: 'form-check-input' }
+          = f.label :answer_unknown, 'わからない', { class: 'form-check-label' }
+        .form-check.form-check-inline
+          = f.radio_button :answer, :negative, { class: 'form-check-input' }
+          = f.label :answer_negative, 'いいえ', { class: 'form-check-label' }
+
+    .row.mt-5
+      .col-6.offset-3
+        = f.submit '回答を送信', class: 'btn btn-lg btn btn-outline-info btn-block'

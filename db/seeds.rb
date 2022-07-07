@@ -38,9 +38,25 @@ when '2'
     { title: '銀魂 ぎんたま', genre: 'SF 時代劇 ギャグ漫画 バトル漫画', serialization_started_year: 2004, serialization_end_year: 2018, publisher: '週刊少年ジャンプ' },
     { title: 'クレヨンしんちゃん', genre: 'ギャグ漫画 青年漫画', serialization_started_year: 1990, serialization_end_year: 2010, publisher: '漫画アクション' }
   ]
+when '3'
+  comics = [
+    { title: 'ワンピース ONE PIECE', genre: '少年漫画 海賊 冒険ファンタジー バトル', serialization_started_year: 1997, serialization_end_year: nil, publisher: '週刊少年ジャンプ' },
+  ]
+
+  questions = [
+    { content: '連載は週刊少年ジャンプ？', algorithm: 'publisher_match', eval_value: '週刊少年ジャンプ' },
+    { content: '海賊が関係してますか？', algorithm: 'genre_match', eval_value: '海賊' }
+  ]
 end
+
 if comics.present?
   comics.each do |comic|
     Comic.create!(comic)
+  end
+end
+
+if questions.present?
+  questions.each do |question|
+    Question.create!(question)
   end
 end
