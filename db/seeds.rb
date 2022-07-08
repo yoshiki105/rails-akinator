@@ -75,6 +75,15 @@ when "5-1"
   questions = [
     { content: '海賊が関係してますか？', algorithm: 'genre_match', eval_value: '海賊' }
   ]
+when "6-1"
+  comics = [
+    { title: 'ワンピース ONE PIECE', genre: '少年漫画 海賊 冒険ファンタジー バトル', serialization_started_year: 1997, serialization_end_year: nil, publisher: '週刊少年ジャンプ' },
+    { title: 'ゴルゴ13', genre: 'ハードボイルド 劇画', serialization_started_year: 1968, serialization_end_year: nil, publisher: 'ビッグコミック' },
+  ]
+
+  questions = [
+    { content: '連載は週刊少年ジャンプ？', algorithm: 'publisher_match', eval_value: '週刊少年ジャンプ' }
+  ]
 end
 
 if comics.present?
